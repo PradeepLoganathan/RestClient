@@ -8,5 +8,11 @@ namespace RestClient
 {
     class Response
     {
+
+        private int MaxRetryCount;
+
+        public Uri BaseURI { get; set; }
+        public Encoding Encoding { get; set; } = new UTF8Encoding(false);
+
     }
 }
