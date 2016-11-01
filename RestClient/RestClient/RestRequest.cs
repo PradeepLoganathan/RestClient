@@ -13,6 +13,17 @@ namespace RestClient
         private List<KeyValuePair<string, string>> _QueryString;
         public object Body { get; set; }
 
+        private RestRequest()
+        {
+
+        }
+
+        public RestRequest Create()
+        {
+            return null;
+
+        }
+
         public void AddQueryString(string Key, string Value)
         {
 
@@ -28,20 +39,26 @@ namespace RestClient
 
         }
 
-        public async Task<RestResponse> ExecuteDelete()
-        {
-
-        }
-
+        
         public async Task<RestResponse> ExecuteGet()
         {
+            return null;
+        }
 
+        public async Task<RestResponse<T>> ExecuteGet<T>()
+        {
+            return null;
         }
 
 
         public async Task<RestResponse> ExecutePost()
         {
+            return null;
+        }
 
+        public async Task<RestResponse> ExecuteDelete()
+        {
+            return null;
         }
 
     }

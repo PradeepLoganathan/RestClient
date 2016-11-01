@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace RestClient
 {
-    class RestClient
+    public class RestClient
     {
+
     }
 }

@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package >
   <metadata>
-    <id>Package</id>
+    <id>Smart.RestClient</id>
     <version>1.0.0</version>
     <authors>Pradeep Loganathan</authors>
     <owners>Pradeep Loganathan</owners>
@@ -14,7 +14,7 @@
     <copyright>Copyright 2016</copyright>
    <!-- <tags>Tag1 Tag2</tags>-->
     <dependencies>
-      <dependency id="SampleDependency" version="1.0" />
+     
     </dependencies>
   </metadata>
   <files>
