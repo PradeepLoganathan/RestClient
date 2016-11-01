@@ -5,13 +5,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Net;
 using System.Net.Http;
+using System.IO;
+using Newtonsoft.Json;
 
 namespace RestClient
 {
     public class RestResponse
     {
 
-        private HttpResponseMessage response;
+        protected HttpResponseMessage Response;
 
 
         public Uri BaseURI { get; set; }
@@ -21,29 +23,53 @@ namespace RestClient
         {
             get
             {
-                return response.StatusCode;
+                return Response.StatusCode;
             }
         }
                 
 
-        public RestResponse()
+        public RestResponse(HttpResponseMessage response)
         {
-            response = new HttpResponseMessage();
+            Response = response;
         }
 
-        public async Task<IEnumerabe<string>> GetHeader(string HeaderName)
+        /// <summary>
+        /// This method retrieves the header specified by HeaderName from the response.
+        /// </summary>
+        /// <param name="HeaderName">Header Name to retrieve from the Response</param>
+        /// <returns></returns>
+        public IEnumerable<string> GetHeader(string HeaderName)
         {
-            return await response.Headers.GetValues(HeaderName).FirstOrDefault();
+            return Response.Headers.GetValues(HeaderName);
         }
-        public async Task<String> GetContent()
-        {
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public async Task<string> GetContent()
+        {
+            return await Response.Content.ReadAsStringAsync().ConfigureAwait(false);
         }
 
     }
 
     public class RestResponse<T> : RestResponse
     {
+
+        public RestResponse(HttpResponseMessage response) : base(response)
+        {
+
+        }
+            
+        public async Task<T> GetDataObject()
+        {
+            Stream content = await Response.Content.ReadAsStreamAsync().ConfigureAwait(false);
+
+            using (StreamReader sr = new StreamReader(content, Encoding.UTF8))
+            using (JsonTextReader Jt = new JsonTextReader(sr))
+                return JsonSerializer.CreateDefault().Deserialize<T>(Jt);
+        }
 
     }
 }

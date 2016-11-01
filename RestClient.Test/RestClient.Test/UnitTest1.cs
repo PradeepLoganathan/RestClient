@@ -10,9 +10,7 @@ namespace RestClient.Test
         [TestMethod]
         public void TestMethod1()
         {
-            RestClient.Re
-            RestClient.RestRequest req = new RestRequest;
-
+            
         }
 
     }
