@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Package</id>
+    <version>1.0.0</version>
+    <authors>Pradeep Loganathan</authors>
+    <owners>Pradeep Loganathan</owners>
+    <licenseUrl>http://LICENSE_URL_HERE_OR_DELETE_THIS_LINE</licenseUrl>
+    <projectUrl>http://PROJECT_URL_HERE_OR_DELETE_THIS_LINE</projectUrl>
+    <iconUrl>http://pradeeploganathan.com/wp-content/uploads/2016/09/REST.png</iconUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>Smart Rest Client</description>
+    <releaseNotes>Rest Client changes.</releaseNotes>
+    <copyright>Copyright 2016</copyright>
+   <!-- <tags>Tag1 Tag2</tags>-->
+    <dependencies>
+      <dependency id="SampleDependency" version="1.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="\RestClient\bin\Release\RestClient.dll" target="lib\RestClient.dll" />
+  </files>
+</package>

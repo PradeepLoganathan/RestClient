@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RestClient
 {
-    class Response
+    public class RestResponse
     {
 
         private int MaxRetryCount;
