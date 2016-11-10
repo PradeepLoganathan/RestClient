@@ -1,3 +1,5 @@
+[![Build status](https://ci.appveyor.com/api/projects/status/hh1v1w1q15hbaeii?svg=true)](https://ci.appveyor.com/project/PradeepLoganathan/restclient)
+
 ### Smartweb.Restclient.
 
 A .Net client for HTTP and Rest calls.
