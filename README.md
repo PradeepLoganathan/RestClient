@@ -1,7 +1,7 @@
 
 [![Build status](https://ci.appveyor.com/api/projects/status/hh1v1w1q15hbaeii?svg=true)](https://ci.appveyor.com/project/PradeepLoganathan/restclient)
 
-[![NuGet Status](http://nugetstatus.com/<package>.png)](http://nugetstatus.com/packages/<package>)
+[![NuGet version](https://badge.fury.io/nu/SmartWeb.RestClient.svg)](https://badge.fury.io/nu/SmartWeb.RestClient)
 
 ### Smartweb.Restclient.
 
